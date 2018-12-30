@@ -1,0 +1,9 @@
+name: clounce_math_examples
+version: 0.0.1
+description: Shows how to use the clounce_math library
+author: Clounce.com <kd@clounce.com>
+homepage: https://www.clounce.com
+
+dependencies:
+  clounce_math:
+    path: ../

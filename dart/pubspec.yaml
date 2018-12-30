@@ -1,0 +1,15 @@
+name: clounce_math
+version: 0.0.1
+description: >-
+  Provides a number of mathematical methods to use in dart projects
+author: Clounce.com <kd@clounce.com>
+homepage: https://www.clounce.com
+documentation: https://www.clounce.com/mathematics
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
+dependencies:
+
+dev_dependencies:
+  test: '>=0.6.0 <0.12.0'
