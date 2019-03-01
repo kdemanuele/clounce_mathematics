@@ -5,3 +5,4 @@ The following examples have been implemented in C# to demostrate the concepts de
 | Concept | Library Method | Example |
 |:---------|:----------------|:---------|
 | [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | ClouncMath.MeanAverages::ArithmeticMean | dotnet run arithmetic_mean |
+| [Mode](http://www.clounce.com/mathematics/mode) | ClouncMath.MeanAverages::Mode | dotnet run mode |s

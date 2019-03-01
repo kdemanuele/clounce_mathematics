@@ -14,5 +14,20 @@ namespace ClounceMath {
 
             return sum / sampleSize;
         }
-    }   
+
+        public static IList<dynamic> Mode(IEnumerable<dynamic> sample) {
+            Dictionary<dynamic, int> counts = new Dictionary<dynamic, int>();
+
+            foreach (dynamic point in sample) {
+                if (counts.ContainsKey(point)) {
+                    counts[point]++;
+                } else {
+                    counts[point] = 1;
+                }
+            }
+
+            int maximumRecurrance = counts.Values.Max();
+            return counts.Where(p => p.Value == maximumRecurrance).Select(p => p.Key).ToList();
+        }
+    }
 }

@@ -5,5 +5,6 @@ The following examples have been implemented in Python to demostrate the concept
 | Concept | Library Method | Example |
 |:---------|:----------------|:---------|
 | [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | ClouncMath::arithmeticMean | python3 arithmetic_mean.py |
+| [Mode](http://www.clounce.com/mathematics/mode) | ClouncMath::mode | python3 arithmetic_mean.py |
 
 **Note: For optimal implementations of the above concepts and support for real projects it is recommended to use the library [NumPy](http://www.numpy.org/) **

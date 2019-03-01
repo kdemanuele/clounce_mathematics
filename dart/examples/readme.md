@@ -4,7 +4,8 @@ The following examples have been implemented in DartLang to demostrate the conce
 
 | Concept | Library Method | Example |
 |:---------|:----------------|:---------|
-| [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | package::clounce_math/statistics/averages::arithmeticMean | dart arithmetic_mean |
+| [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | package::clounce_math/statistics/averages::arithmeticMean | dart arithmetic_mean.dart |
+| [Mode](http://www.clounce.com/mathematics/mode) | package::clounce_math/statistics/averages::mode | dart mode.dart |
 
 *Notes:*
 

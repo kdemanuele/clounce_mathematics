@@ -15,6 +15,9 @@
                 case "arithmetic_mean":
                     ArithmeticMean.RunExamples();
                     break;
+                case "mode":
+                    Mode.RunExamples();
+                    break;
             }
         }
     }
