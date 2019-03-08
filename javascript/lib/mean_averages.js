@@ -34,6 +34,22 @@ class Averages {
 
         return result;
     }
+
+    static median(sample) {
+        let sortedArray = sample.slice().sort(function(a,b) { return a - b;});
+        let sampleSize = sortedArray.length;
+        if (sampleSize == 0) {
+            return 0;
+        }
+        
+        let middle = Math.floor(sampleSize / 2);
+        if (sampleSize % 2 == 1) {
+            return sortedArray[middle];
+        }
+
+        // Since the indices of arrays start at 0, we have to deduct 1 from the value obtained
+        return (sortedArray[middle - 1] + sortedArray[middle]) / 2;
+    }
 }
 
 module.exports = Averages;
