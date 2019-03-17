@@ -32,4 +32,23 @@ class Averages {
     pointCount.removeWhere((point, recurrence) => recurrence != maxima);
     return pointCount.keys.toList();
   }
+
+  static num median(List<num> sample) {
+    var sampleSize = sample.length;
+
+    if (sampleSize == 0) {
+      return null;
+    }
+
+    List<num> sortedSample = List.from(sample);
+    sortedSample.sort();
+
+    int middle = (sampleSize / 2).floor();
+
+    if (sampleSize % 2 == 1) {
+      return sortedSample[middle];
+    }
+
+    return (sortedSample[middle - 1] + sortedSample[middle]) / 2;
+  }
 }

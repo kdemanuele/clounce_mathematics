@@ -42,4 +42,21 @@ class MeanAverages {
 
         return $max;
     }
+
+    static function median($sample) {
+        $sampleSize = count($sample);
+        if ($sampleSize == 0) {
+            return 0;
+        }
+
+        $sortedSample = array_splice($sample, 0);
+        sort($sortedSample);
+
+        $middle = intval(floor($sampleSize / 2));
+        if ($sampleSize % 2 == 1) {
+            return $sortedSample[$middle];
+        }
+
+        return ($sortedSample[$middle - 1] + $sortedSample[$middle]) / 2;
+    }
 }

@@ -5,26 +5,26 @@ namespace ClounceMathExamples {
     using System.Collections.Generic;
     using System.Linq;
 
-    sealed class Mode {
+    sealed class Median {
         public static void RunExamples() {
             int sampleNumber = 1;
 
             IEnumerable<IEnumerable<dynamic>> samples = SampleDataLoader.GetSamplesFromFile();
 
             foreach (IEnumerable<dynamic> sample in SampleDataLoader.GetSamplesFromFile()) {
-                dynamic average = MeanAverages.Mode(sample);
+                dynamic average = MeanAverages.Median(sample);
                 PrintData(sampleNumber++, sample, average);
             }
 
             var dynamicSample = GenerateDynamicSample();
-            var median = MeanAverages.Mode(dynamicSample);
+            var median = MeanAverages.Median(dynamicSample);
             PrintData(sampleNumber++, dynamicSample, median);
         }
 
         private static void PrintData(int sampleNumber, IEnumerable<dynamic> sample, dynamic average) {
             Console.WriteLine($"Sample {sampleNumber}");
             Console.WriteLine($"Sample Data: {string.Join(", ", sample)}");
-            Console.WriteLine($"Mode: {string.Join(',', average)}");
+            Console.WriteLine($"Median: {string.Join(',', average)}");
             Console.WriteLine();
             Console.WriteLine();
         }

@@ -18,6 +18,9 @@
                 case "mode":
                     Mode.RunExamples();
                     break;
+                case "median":
+                    Median.RunExamples();
+                    break;
             }
         }
     }
