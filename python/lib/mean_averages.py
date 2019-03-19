@@ -1,11 +1,11 @@
-from collections import Counter;
-from math import floor;
+from collections import Counter
+from math import floor
 
 class MeanAverages:
     @staticmethod
     def arithmetic_mean(sample):
-        sampleSize = len(sample)
-        if sampleSize == 0:
+        sample_size = len(sample)
+        if sample_size == 0:
             return 0
 
         sum = 0
@@ -13,27 +13,26 @@ class MeanAverages:
             if (isinstance(point, int) or isinstance(point, float)):
                 sum += point
                 
-        return sum / sampleSize
+        return sum / sample_size
     
     @staticmethod
     def mode(sample):
-        sampleSize = len(sample)
         if sample == 0:
             return 0
 
-        pointCount = Counter(sample)
-        pointCount = pointCount.most_common()
-        return set(pt for pt, count in pointCount if count == pointCount[0][1])
+        point_count = Counter(sample)
+        point_count = point_count.most_common()
+        return set(pt for pt, count in point_count if count == point_count[0][1])
 
     @staticmethod
     def median(sample):
-        sampleSize = len(sample)
+        sample_size = len(sample)
         if sample == 0:
             return 0
         
-        sortedSample = sorted(sample)
-        middle = floor(sampleSize / 2)
-        if (sampleSize % 2 == 1):
-            return sortedSample[middle];
+        sorted_sample = sorted(sample)
+        middle = floor(sample_size / 2)
+        if (sample_size % 2 == 1):
+            return sorted_sample[middle]
 
-        return (sortedSample[middle -1 ] + sortedSample[middle]) / 2
+        return (sorted_sample[middle - 1] + sorted_sample[middle]) / 2

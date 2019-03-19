@@ -7,5 +7,7 @@
 
   <ItemGroup>
     <Compile Include="../lib/MeanAverages.cs" />
+    <Compile Include="../lib/Sequences.cs" />
+    <Compile Include="../lib/SequenceSolver.cs" />
   </ItemGroup>
 </Project>

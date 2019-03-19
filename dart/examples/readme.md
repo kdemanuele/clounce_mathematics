@@ -4,9 +4,19 @@ The following examples have been implemented in DartLang to demostrate the conce
 
 | Concept | Library Method | Example |
 |:---------|:----------------|:---------|
-| [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | package::clounce_math/statistics/averages::arithmeticMean | dart arithmetic_mean.dart |
-| [Mode](http://www.clounce.com/mathematics/mode) | package::clounce_math/statistics/averages::mode | dart mode.dart |
-| [Median](http://www.clounce.com/mathematics/median) | package::clounce_math/statistics/averages::median | dart median.dart |
+| [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | import('package:clounce_math/statistics/averages.dart'); Average.arithmeticMean | dart arithmetic_mean.dart |
+| [Mode](http://www.clounce.com/mathematics/mode) | import('package:clounce_math/statistics/averages.dart'); Average.mode | dart mode.dart |
+| [Median](http://www.clounce.com/mathematics/median) | import('package:clounce_math/statistics/averages.dart'); Average.median | dart median.dart |
+<br/><br/>
+
+| Sequence Concept | Library Method | Example |
+|:---------|:----------------|:---------|
+| [Jacobsthal](http://www.clounce.com/mathematics/jacobsthal) | import('package:clounce_math/sequences/jacobsthal_numbers.dart'); JacobsthalNumbers.compute <br/> import('package:clounce_math/sequences/jacobsthal_numbers.dart'); JacobsthalNumbers.generate | dart jacobsthal_numbers.dart |
+<br/><br/>
+
+| Algorithm | Library Method | Example |
+|:---------|:----------------|:---------|
+| [Arithmetic Mean Sequence](http://www.clounce.com/mathematics/algorithm/arithmetic-mean-sequence) | import('package:clounce_math/solvers/arithmetic_mean_sequence.dart'); ArithmeticMeanSequence.solve <br /> import('package:clounce_math/solvers/arithmetic_mean_sequence.dart'); ArithmeticMeanSequence.solveForVariable | dart arithmetic_mean_sequence.dart |
 
 *Notes:*
 
