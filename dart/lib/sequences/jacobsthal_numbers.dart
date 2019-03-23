@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:core';
+import 'dart:math';
 
 class JacobsthalNumber {
   static num compute(int position) {
@@ -12,6 +13,14 @@ class JacobsthalNumber {
     }
 
     return (2 * compute(position - 2)) + compute(position - 1);
+  }
+
+  static num computeUsingFreySellers(int position) {
+      return (pow(2, position + 1) + pow(-1, position)) / 3;
+  }
+
+  static num comnputeUsingJacobsthalNumberRabago(int position) {
+      return (pow(2, position) - pow(-1, position)) / 3;
   }
 
   static Stream<int> generate(int maxPosition) async* {
@@ -27,6 +36,18 @@ class JacobsthalNumber {
       lastPosition = newSequenceNumber;
 
       yield newSequenceNumber;
+    }
+  }
+
+  static Stream<num> generateUsingFreySeller(int maxPosition) async* {
+    for (var position = 1; position < maxPosition; position++) {
+      yield (pow(2, position + 1) + pow(-1, position)) / 3;
+    }
+  }
+
+  static Stream<num> generateUsingRabago(int maxPosition) async* {
+    for (var position = 1; position < maxPosition; position++) {
+      yield (pow(2, position) - pow(-1, position)) / 3;
     }
   }
 }

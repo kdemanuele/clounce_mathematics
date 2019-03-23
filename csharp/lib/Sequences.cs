@@ -1,4 +1,5 @@
 namespace ClounceMath {
+    using System;
     using System.Collections.Generic;
 
     public sealed class Sequences {
@@ -12,6 +13,14 @@ namespace ClounceMath {
             }
 
             return 2*JacobsthalNumber(position - 2) + JacobsthalNumber(position - 1);
+        }
+
+        static public ulong JacobsthalNumberFreySellersAlgorithm(int position) {
+            return Convert.ToUInt64((Math.Pow(2, position + 1) + Math.Pow(-1, position)) / 3);
+        }
+
+        static public ulong JacobsthalNumberRabagoAlgorithm(int position) {
+            return Convert.ToUInt64((Math.Pow(2, position) - Math.Pow(-1, position)) / 3);
         }
 
         static public IEnumerable<ulong> JacobsthalNumberGenerator(int maxPosition) {
@@ -30,6 +39,18 @@ namespace ClounceMath {
                 lastPosition = newSequenceNumber;
 
                 yield return newSequenceNumber;
+            }
+        }
+
+        static public IEnumerable<ulong> JacobsthalNumberFreySellersGenerator(int maxPosition) {
+            for (int position = 1; position < maxPosition; position++) {
+                yield return Convert.ToUInt64((Math.Pow(2, position + 1) + Math.Pow(-1, position)) / 3);
+            }
+        }
+
+        static public IEnumerable<ulong> JacobsthalNumberRabagoGenerator(int maxPosition) {
+            for (int position = 1; position < maxPosition; position++) {
+                yield return Convert.ToUInt64((Math.Pow(2, position) - Math.Pow(-1, position)) / 3);
             }
         }
     }

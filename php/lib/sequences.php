@@ -15,6 +15,14 @@ class Sequences {
         return 2 * self::jacobsthalNumber($position - 2) + self::jacobsthalNumber($position - 1);
     }
 
+    public static function jacobsthalNumberFreySellersAlgorithm(int $position) {
+        return (pow(2, $position + 1) + pow(-1, $position)) / 3;
+    }
+
+    public static function jacobsthalNumberRabagoAlgorithm(int $position) {
+        return (pow(2, $position) - pow(-1, $position)) / 3;
+    }
+
     public static function jacobsthalNumberGenerator(int $maxPosition) {
         $preLastPosition = 0;
         $lastPosition = 1;
@@ -33,6 +41,18 @@ class Sequences {
             $lastPosition = $newSequenceNumber;
 
             yield $newSequenceNumber;
+        }
+    }
+
+    public static function jacobsthalNumberBabagoGenerator(int $maxPosition) {
+        for ($position = 1; $position < $maxPosition; $position++) {
+            yield (pow(2, $position) - pow(-1, $position)) / 3;
+        }
+    }
+
+    public static function jacobsthalNumberFreySellerGenerator(int $maxPosition) {
+        for ($position = 1; $position < $maxPosition; $position++) {
+            yield (pow(2, $position + 1) + pow(-1, $position)) / 3;
         }
     }
 }

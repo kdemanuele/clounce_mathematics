@@ -11,14 +11,14 @@ class SequenceSolver {
 
         let numberOfVariables = variables.length;
         // Jacobsthal numbers start at J(0) however the algorithm needs to start at J(1)
-        let sequenceNumber = sequences.jacobsthalNumber(numberOfVariables + 1);
-        let nextSequenceNumber = sequences.jacobsthalNumber(numberOfVariables + 2);
+        let sequenceNumber = sequences.jacobsthalNumberBabagoGenerator(numberOfVariables + 1);
+        let nextSequenceNumber = sequences.jacobsthalNumberBabagoGenerator(numberOfVariables + 2);
 
         variables[0] = (((2 ** numberOfVariables) * sequenceEndValue) - (sequenceNumber * sequenceStartValue)) / nextSequenceNumber;
 
         for (let i = 1; i < numberOfVariables; i++) {
-            sequenceNumber = sequences.jacobsthalNumber(i + 1);
-            nextSequenceNumber = sequences.jacobsthalNumber(i + 2);
+            sequenceNumber = sequences.jacobsthalNumberBabagoGenerator(i + 1);
+            nextSequenceNumber = sequences.jacobsthalNumberBabagoGenerator(i + 2);
 
             variables[i] = ((sequenceNumber * sequenceStartValue) + (nextSequenceNumber * variables[0])) / (2 ** i);
         }
@@ -34,10 +34,10 @@ class SequenceSolver {
         // Jackobsthal Sequence Generator starts at J(0), however for the calculations
         // the sequence needs to start from J(1). Thus the varlues in the parameters are
         // corrected with an addition of 1 to shift the sequence
-        let nthJacobsthal = sequences.jacobsthalNumber(variableToSolve + 1);
-        let preNthJacobsthal = sequences.jacobsthalNumber(variableToSolve);
-        let sizeVarJacobsthal = sequences.jacobsthalNumber(numberOfVariables + 1);
-        let nextSizeVarJacobsthal = sequences.jacobsthalNumber(numberOfVariables + 2);
+        let nthJacobsthal = sequences.jacobsthalNumberBabagoGenerator(variableToSolve + 1);
+        let preNthJacobsthal = sequences.jacobsthalNumberBabagoGenerator(variableToSolve);
+        let sizeVarJacobsthal = sequences.jacobsthalNumberBabagoGenerator(numberOfVariables + 1);
+        let nextSizeVarJacobsthal = sequences.jacobsthalNumberBabagoGenerator(numberOfVariables + 2);
 
         let yCalculation = (2 ** numberOfVariables) * nthJacobsthal * sequenceEndValue;
         let xCalculation = ((((-1) ** variableToSolve) * sizeVarJacobsthal) +

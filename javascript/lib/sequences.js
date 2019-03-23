@@ -12,6 +12,14 @@ class Sequences {
         return 2 * this.jacobsthalNumber(position - 2) + this.jacobsthalNumber(position - 1);
     }
 
+    static jacobsthalNumberFreySellersAlgorithm(position) {
+        return ((2 ** (position + 1)) + ((-1) ** position)) / 3;
+    }
+
+    static jacobsthalNumberRabagoAlgorithm(position) {
+        return ((2 ** position) - ((-1) ** position)) / 3;
+    }
+
     static * jacobsthalNumberGenerator(maxPosition) {
         if (maxPosition === undefined || isNaN(maxPosition) || maxPosition < 1) {
             return 0;
@@ -28,6 +36,26 @@ class Sequences {
             lastPosition = newSequenceNumber;
 
             yield newSequenceNumber;
+        }
+    }
+
+    static * jacobsthalNumberFreySellersGenerator(maxPosition) {
+        if (maxPosition === undefined || isNaN(maxPosition) || maxPosition < 1) {
+            return 0;
+        }
+
+        for (let position = 1; position < maxPosition; position++) {
+            yield ((2 ** (position + 1)) + ((-1) ** position)) / 3;
+        }
+    }
+
+    static * jacobsthalNumberBabagoGenerator(maxPosition) {
+        if (maxPosition === undefined || isNaN(maxPosition) || maxPosition < 1) {
+            return 0;
+        }
+
+        for (let position = 1; position < maxPosition; position++) {
+            yield ((2 ** position) - ((-1) ** position)) / 3;
         }
     }
 }
