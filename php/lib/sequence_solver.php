@@ -11,15 +11,14 @@ class SequenceSolver {
         }
 
         $numberOfVariables = count($variables);
-        // Jacobsthal numbers start at J(0) however the algorithm needs to start at J(1)
-        $sequenceNumber = Sequences::jacobsthalNumberFreySellerGenerator($numberOfVariables + 1);
-        $nextSequenceNumber = Sequences::jacobsthalNumberFreySellerGenerator($numberOfVariables + 2);
+        $sequenceNumber = Sequences::jacobsthalNumberNonRecursive($numberOfVariables);
+        $nextSequenceNumber = Sequences::jacobsthalNumberNonRecursive($numberOfVariables + 1);
 
         $variables[0] = ((pow(2, $numberOfVariables) * $sequenceEndValue) - ($sequenceNumber * $sequenceStartValue)) / $nextSequenceNumber;
 
         for ($i = 1; $i < $numberOfVariables; $i++) {
-            $sequenceNumber = Sequences::jacobsthalNumberFreySellerGenerator($i + 1);
-            $nextSequenceNumber = Sequences::jacobsthalNumberFreySellerGenerator($i + 2);
+            $sequenceNumber = Sequences::jacobsthalNumberNonRecursive($i);
+            $nextSequenceNumber = Sequences::jacobsthalNumberNonRecursive($i + 1);
 
             $variables[$i] = (($sequenceNumber * $sequenceStartValue) + ($nextSequenceNumber * $variables[0])) / pow(2, $i);
         }
@@ -31,13 +30,10 @@ class SequenceSolver {
             return 0;
         }
 
-        // Jackobsthal Sequence Generator starts at J(0), however for the calculations
-        // the sequence needs to start from J(1). Thus the varlues in the parameters are
-        // corrected with an addition of 1 to shift the sequence
-        $nthJacobsthal = Sequences::jacobsthalNumberFreySellerGenerator($variableToSolve + 1);
-        $preNthJacobsthal = Sequences::jacobsthalNumberFreySellerGenerator($variableToSolve);
-        $sizeVarJacobsthal = Sequences::jacobsthalNumberFreySellerGenerator($numberOfVariables + 1);
-        $nextSizeVarJacobsthal = Sequences::jacobsthalNumberFreySellerGenerator($numberOfVariables + 2);
+        $nthJacobsthal = Sequences::jacobsthalNumberNonRecursive($variableToSolve);
+        $preNthJacobsthal = Sequences::jacobsthalNumberNonRecursive($variableToSolve - 1);
+        $sizeVarJacobsthal = Sequences::jacobsthalNumberNonRecursive($numberOfVariables);
+        $nextSizeVarJacobsthal = Sequences::jacobsthalNumberNonRecursive($numberOfVariables + 1);
 
         $yCalculation = pow(2, $numberOfVariables) * $nthJacobsthal * $sequenceEndValue;
         $xCalculation = ((pow(-1, $variableToSolve) * $sizeVarJacobsthal) +

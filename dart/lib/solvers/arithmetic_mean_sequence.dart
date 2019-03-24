@@ -8,15 +8,14 @@ class ArithmeticMeanSequence {
     }
 
     var numberOfVariables = variables.length;
-    // Jacobsthal numbers start at J(0) however the algorithm needs to start at J(1)
-    var sequenceNumber = JacobsthalNumber.computeUsingFreySellers(numberOfVariables + 1);
-    var nextSequenceNumber = JacobsthalNumber.computeUsingFreySellers(numberOfVariables + 2);
+    var sequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables);
+    var nextSequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables + 1);
 
     variables[0] = ((pow(2, numberOfVariables) * sequenceEndValue) - (sequenceNumber * sequenceStartValue)) / nextSequenceNumber;
 
     for (var i = 1; i < numberOfVariables; i++) {
-        sequenceNumber = JacobsthalNumber.computeUsingFreySellers(i + 1);
-        nextSequenceNumber = JacobsthalNumber.computeUsingFreySellers(i + 2);
+        sequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(i);
+        nextSequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(i + 1);
 
         variables[i] = ((sequenceNumber * sequenceStartValue) + (nextSequenceNumber * variables[0])) /pow(2, i);
     }
@@ -28,13 +27,10 @@ class ArithmeticMeanSequence {
                 return 0;
         }
 
-        // Jackobsthal Sequence Generator starts at J(0), however for the calculations
-        // the sequence needs to start from J(1). Thus the varlues in the parameters are
-        // corrected with an addition of 1 to shift the sequence
-        var nthJacobsthal = JacobsthalNumber.computeUsingFreySellers(variableToSolve + 1);
-        var preNthJacobsthal = JacobsthalNumber.computeUsingFreySellers(variableToSolve);
-        var sizeVarJacobsthal = JacobsthalNumber.computeUsingFreySellers(numberOfVariables + 1);
-        var nextSizeVarJacobsthal = JacobsthalNumber.computeUsingFreySellers(numberOfVariables + 2);
+        var nthJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(variableToSolve);
+        var preNthJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(variableToSolve - 1);
+        var sizeVarJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables);
+        var nextSizeVarJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables + 1);
 
         var yCalculation = pow(2, numberOfVariables) * nthJacobsthal * sequenceEndValue;
         var xCalculation = ((pow(-1, variableToSolve) * sizeVarJacobsthal) +

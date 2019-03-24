@@ -2,21 +2,21 @@
 
 class Sequences {
     static jacobsthalNumber(position) {
-        if (position === undefined || isNaN(position) || position < 1) {
+        if (position === undefined || isNaN(position) || position < 0) {
             return 0;
         }
 
-        if (position === 1) return 0;
-        if (position === 2) return 1;
+        if (position === 0) return 0;
+        if (position === 1) return 1;
 
         return 2 * this.jacobsthalNumber(position - 2) + this.jacobsthalNumber(position - 1);
     }
 
-    static jacobsthalNumberFreySellersAlgorithm(position) {
-        return ((2 ** (position + 1)) + ((-1) ** position)) / 3;
-    }
+    static jacobsthalNumberNonRecursive(position) {
+        if (position === undefined || isNaN(position) || position < 0) {
+            return 0;
+        }
 
-    static jacobsthalNumberRabagoAlgorithm(position) {
         return ((2 ** position) - ((-1) ** position)) / 3;
     }
 
@@ -27,9 +27,9 @@ class Sequences {
 
         let preLastPosition = 0;
         let lastPosition = 1;
-        for (let position = 1; position < maxPosition; position++) {
-            if (position === 1) yield preLastPosition;
-            if (position === 2) yield lastPosition;
+        for (let position = 0; position <= maxPosition; position++) {
+            if (position === 0) yield preLastPosition;
+            if (position === 1) yield lastPosition;
 
             let newSequenceNumber = 2 * preLastPosition + lastPosition;
             preLastPosition = lastPosition;
@@ -39,22 +39,12 @@ class Sequences {
         }
     }
 
-    static * jacobsthalNumberFreySellersGenerator(maxPosition) {
+    static * jacobsthalNumberNonRecursiveGenerator(maxPosition) {
         if (maxPosition === undefined || isNaN(maxPosition) || maxPosition < 1) {
             return 0;
         }
 
-        for (let position = 1; position < maxPosition; position++) {
-            yield ((2 ** (position + 1)) + ((-1) ** position)) / 3;
-        }
-    }
-
-    static * jacobsthalNumberBabagoGenerator(maxPosition) {
-        if (maxPosition === undefined || isNaN(maxPosition) || maxPosition < 1) {
-            return 0;
-        }
-
-        for (let position = 1; position < maxPosition; position++) {
+        for (let position = 0; position <= maxPosition; position++) {
             yield ((2 ** position) - ((-1) ** position)) / 3;
         }
     }
