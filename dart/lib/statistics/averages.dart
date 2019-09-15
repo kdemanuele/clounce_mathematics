@@ -51,4 +51,22 @@ class Averages {
 
     return (sortedSample[middle - 1] + sortedSample[middle]) / 2;
   }
+
+  /// Calculates the Average of the sample by multiplying the values in the sample and finds the nth root of the product where n is the sample size
+  static num geometricMean(List<num> sample) {
+    var sampleSize = sample.length;
+
+    if (sampleSize == 0) {
+      return 0;
+    }
+
+    // Initialising the product value to the identity value, 1
+    double product = 1;
+    sample.forEach((point) {
+      product *= point;
+    });
+
+    // Using the convertion between nth roots to rational exponents
+    return pow(product, 1 / sampleSize);
+  }
 }

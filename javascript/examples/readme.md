@@ -7,6 +7,7 @@ The following examples have been implemented in JavaScript (ES6) to demostrate t
 | [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | require('../lib/mean_averages.js'); | node arithmetic_mean.js |
 | [Mode](http://www.clounce.com/mathematics/mode) | require('../lib/mean_averages.js'); | node mode.js |
 | [Median](http://www.clounce.com/mathematics/median) | require('../lib/mean_averages.js'); | node median.js |
+| [Geomteric Mean](http://www.clounce.com/mathematics/geometric_mean) | require('../lib/mean_averages.js'); | node geometric_mean.js |
 <br/><br/>
 
 | Sequence Concept | Library Method | Example |

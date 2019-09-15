@@ -49,5 +49,20 @@ namespace ClounceMath {
 
             return (sortedSample[lowerBound] + sortedSample[upperBound]) / 2;
         }
+
+        public static dynamic GeometricMean(IEnumerable<dynamic> sample) {
+            int sampleSize = sample.Count();
+
+            // Initialising value to 1 as 1 is the identity value in multiplication
+            double product = 1;
+
+            foreach (dynamic point in sample) {
+                double.TryParse(point.ToString(), out double pointValue);
+                product *= pointValue;
+            }
+
+            // Using the convertion between nth roots to rational exponents
+            return Math.Pow(product, 1.0d / sampleSize);
+        }
     }
 }

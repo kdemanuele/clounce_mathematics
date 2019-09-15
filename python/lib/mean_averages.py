@@ -36,3 +36,17 @@ class MeanAverages:
             return sorted_sample[middle]
 
         return (sorted_sample[middle - 1] + sorted_sample[middle]) / 2
+
+    @staticmethod
+    def geometric_mean(sample):
+        sample_size = len(sample)
+        if sample_size == 0:
+            return 0
+
+        # Initialising value to 1 as 1 is the identity value in multiplication
+        product = 1
+        for point in sample:
+            if (isinstance(point, int) or isinstance(point, float)):
+                product *= point
+        # Using the convertion between nth roots to rational exponents        
+        return product ** (1 / float(sample_size))
