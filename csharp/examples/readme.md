@@ -8,6 +8,7 @@ The following examples have been implemented in C# to demostrate the concepts de
 | [Arithmetic Mean](https://www.clounce.com/mathematics/arithmetic_mean) | ClouncMath.MeanAverages::ArithmeticMean | dotnet run arithmetic_mean |
 | [Mode](https://www.clounce.com/mathematics/mode) | ClouncMath.MeanAverages::Mode | dotnet run mode |
 | [Median](https://www.clounce.com/mathematics/median) | ClouncMath.MeanAverages::Median | dotnet run median |
+| [Geometric Mean](https://www.clounce.com/mathematics/geometric_mean) | ClouncMath.MeanAverages::GeometricMean | dotnet run geometric_mean |
 <br/><br/>
 
 | Sequence Concept | Library Method | Example |

@@ -50,6 +50,17 @@ class Averages {
         // Since the indices of arrays start at 0, we have to deduct 1 from the value obtained
         return (sortedArray[middle - 1] + sortedArray[middle]) / 2;
     }
+
+    static geometricMean(sample) {
+        // Initialising value to 1 as 1 is the identity value in multiplication
+        let product = 1;
+        for(let point of sample) {
+            product *= point;
+        }
+
+        // Using the convertion between nth roots to rational exponents
+        return Math.pow(product, 1 / sample.length);
+    }
 }
 
 module.exports = Averages;

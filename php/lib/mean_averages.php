@@ -59,4 +59,23 @@ class MeanAverages {
 
         return ($sortedSample[$middle - 1] + $sortedSample[$middle]) / 2;
     }
+
+    public static function geometricMean($sample) {
+        $sampleSize = count($sample);
+        if ($sampleSize == 0) {
+            return 0;
+        }
+
+        // Initialising to the identity value
+        $product = 1;
+
+        foreach ($sample as $point) {
+            if (is_numeric($point)) {
+                $product *= $point;
+            }
+        }
+
+        // Using the convertion between nth roots to rational exponents        
+        return pow($product, 1 / $sampleSize);
+    }
 }

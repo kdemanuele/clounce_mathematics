@@ -27,6 +27,9 @@
                 case "arithmetic_mean_sequence":
                     ArithmeticMeanSequence.RunSample();
                     break;
+                case "geometric_mean":
+                    GeometricMean.RunExamples();
+                    break;
             }
         }
     }

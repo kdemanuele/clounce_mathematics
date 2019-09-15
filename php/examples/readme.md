@@ -7,6 +7,7 @@ The following examples have been implemented in PHP to demostrate the concepts d
 | [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | ClouncMath\MeanAverages::arithmeticMean | php arithmetic_mean.php |
 | [Mode](http://www.clounce.com/mathematics/mode) | ClouncMath\MeanAverages::mode | php mode.php |
 | [Median](http://www.clounce.com/mathematics/median) | ClouncMath\MeanAverages::median | php median.php |
+| [Geometric Mean](http://www.clounce.com/mathematics/geometric_mean) | ClouncMath\MeanAverages::geometricMean | php geometric_mean.php |
 <br/><br/>
 
 | Sequence Concept | Library Method | Example |

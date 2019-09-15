@@ -7,6 +7,7 @@ The following examples have been implemented in DartLang to demostrate the conce
 | [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | import('package:clounce_math/statistics/averages.dart'); Average.arithmeticMean | dart arithmetic_mean.dart |
 | [Mode](http://www.clounce.com/mathematics/mode) | import('package:clounce_math/statistics/averages.dart'); Average.mode | dart mode.dart |
 | [Median](http://www.clounce.com/mathematics/median) | import('package:clounce_math/statistics/averages.dart'); Average.median | dart median.dart |
+| [Geometric Mean](http://www.clounce.com/mathematics/geometric_mean) | import('package:clounce_math/statistics/averages.dart'); Average.geometricMean | dart geometric_mean.dart |
 <br/><br/>
 
 | Sequence Concept | Library Method | Example |

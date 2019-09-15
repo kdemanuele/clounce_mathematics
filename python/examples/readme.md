@@ -7,6 +7,7 @@ The following examples have been implemented in Python to demostrate the concept
 | [Arithmetic Mean](http://www.clounce.com/mathematics/arithmetic_mean) | MeanAverages.arithmetic_mean | python3 arithmetic_mean.py |
 | [Mode](http://www.clounce.com/mathematics/mode) | MeanAverages.mode | python3 mode.py |
 | [Median](http://www.clounce.com/mathematics/median) | MeanAverages.mmedian | python3 median.py |
+| [Geometric Mean](http://www.clounce.com/mathematics/geometric_mean) | MeanAverages.geometric_mean | python3 geometric_mean.py |
 <br/><br/>
 
 | Sequence Concept | Library Method | Example |
