@@ -11,7 +11,7 @@ The following examples have been implemented in Python to demostrate the concept
 
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
-| [Jacobsthal](http://www.clounce.com/mathematics/jacobsthal) |  Sequences.jacobsthal_number <br/> Sequences.jacobsthal_number_generator | python3 jacobsthal |
+| [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) |  Sequences.jacobsthal_number <br/> Sequences.jacobsthal_number_generator | python3 jacobsthal |
 <br/><br/>
 
 | Algorithm | Library Method | Example |

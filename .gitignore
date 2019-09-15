@@ -8,3 +8,4 @@
 **/bin/*
 **/pubspec.lock
 **/.packages
+*.code-workspace

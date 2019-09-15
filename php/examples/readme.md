@@ -11,7 +11,7 @@ The following examples have been implemented in PHP to demostrate the concepts d
 
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
-| [Jacobsthal](http://www.clounce.com/mathematics/jacobsthal) |  ClouncMath\Sequences::jacobsthalNumbers <br/> ClounceMath\Sequences::jacobsthalNumberGenerator | php jacobsthal_numbers.php |
+| [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) |  ClouncMath\Sequences::jacobsthalNumbers <br/> ClounceMath\Sequences::jacobsthalNumberGenerator | php jacobsthal_numbers.php |
 <br/><br/>
 
 | Algorithm | Library Method | Example |

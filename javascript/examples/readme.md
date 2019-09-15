@@ -11,7 +11,7 @@ The following examples have been implemented in JavaScript (ES6) to demostrate t
 
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
-| [Jacobsthal](http://www.clounce.com/mathematics/jacobsthal) |  require('../lib/sequences.js') | node jacobsthal_numbers.js |
+| [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) |  require('../lib/sequences.js') | node jacobsthal_numbers.js |
 <br/><br/>
 
 | Algorithm | Library Method | Example |
