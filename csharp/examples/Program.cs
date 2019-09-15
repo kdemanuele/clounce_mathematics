@@ -21,6 +21,12 @@
                 case "median":
                     Median.RunExamples();
                     break;
+                case "jacobsthal":
+                    JacobsthalNumbers.RunSequence();
+                    break;
+                case "arithmetic_mean_sequence":
+                    ArithmeticMeanSequence.RunSample();
+                    break;
             }
         }
     }

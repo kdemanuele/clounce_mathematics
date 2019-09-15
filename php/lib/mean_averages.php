@@ -3,7 +3,7 @@
 namespace ClounceMath;
 
 class MeanAverages {
-    static function arithmeticMean($sample) {
+    public static function arithmeticMean($sample) {
         $sampleSize = count($sample);
         if ($sampleSize == 0) {
             return 0;
@@ -20,7 +20,7 @@ class MeanAverages {
         return $sum / $sampleSize;
     }
 
-    static function mode($sample) {
+    public static function mode($sample) {
         $sampleSize = count($sample);
         if ($sampleSize == 0) {
             return 0;
@@ -43,7 +43,7 @@ class MeanAverages {
         return $max;
     }
 
-    static function median($sample) {
+    public static function median($sample) {
         $sampleSize = count($sample);
         if ($sampleSize == 0) {
             return 0;
