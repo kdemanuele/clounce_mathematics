@@ -30,6 +30,9 @@
                 case "geometric_mean":
                     GeometricMean.RunExamples();
                     break;
+                case "kappa":
+                    KappaNumbers.RunSequence();
+                    break;
             }
         }
     }
