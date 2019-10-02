@@ -15,7 +15,7 @@ class JacobsthalNumber {
     return (2 * compute(position - 2)) + compute(position - 1);
   }
 
-  static num comnputeWithoutRecursion(int position) {
+  static num computeWithoutRecursion(int position) {
       return (pow(2, position) - pow(-1, position)) / 3;
   }
 

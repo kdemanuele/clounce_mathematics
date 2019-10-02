@@ -8,7 +8,7 @@ namespace ClounceMathExamples {
             int l = 9;
             foreach (double number in Sequences.KappaNumberGenerator(l)) {
                 Console.Write("K({0,2}, {1,2}): {2,-30}", l, i, number);
-                if (++i % 3 == 0) {
+                if (++i % 3 == 1) {
                     Console.WriteLine();
                 }
             }

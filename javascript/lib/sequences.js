@@ -48,6 +48,20 @@ class Sequences {
             yield ((2 ** position) - ((-1) ** position)) / 3;
         }
     }
+
+    static kappaNumber(maxPosition, position) {
+        if (maxPosition === undefined || isNaN(maxPosition)) {
+            return 0;
+        }
+
+        return (2 ** maxPosition) * (this.jacobsthalNumberNonRecursive(position) / (2 ** (position - 1)));
+    }
+
+    static * kappaNumberGenerator(maxPosition) {
+        for (let position = 1; position <= maxPosition; position++) {
+            yield this.kappaNumber(maxPosition, position);
+        }
+    }
 }
 
 module.exports = Sequences;
