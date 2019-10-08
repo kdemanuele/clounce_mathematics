@@ -43,5 +43,15 @@ namespace ClounceMath {
                 yield return Convert.ToUInt64((Math.Pow(2, position) - Math.Pow(-1, position)) / 3);
             }
         }
+
+        static public double KappaNumber(int maxPosition, int position) {
+            return Math.Pow(2, maxPosition) * (JacobsthalNumber(position) / Math.Pow(2d, position - 1));
+        }
+        
+        static public IEnumerable<double> KappaNumberGenerator(int maxPosition) {
+            for (int position = 1; position <= maxPosition; position++) {
+                yield return KappaNumber(maxPosition, position);
+            }
+        }
     }
 }

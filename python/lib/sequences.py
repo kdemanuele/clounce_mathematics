@@ -36,3 +36,12 @@ class Sequences:
     def jacobsthal_number_non_recursive_generator(max_position):
         for position in range(0, max_position):
             yield (pow(2, position) - pow(-1, position)) / 3
+    
+    @staticmethod
+    def kappa_generator(max_position):
+        for position in range(1, max_position + 1):
+            yield pow(2, max_position) * (Sequences.jacobsthal_number_non_recursive(position) / pow(2, position - 1))
+
+    @staticmethod
+    def kappa_number(max_position, position):
+        return pow(2, max_position) * (Sequences.jacobsthal_number_non_recursive(position) / pow(2, position - 1))

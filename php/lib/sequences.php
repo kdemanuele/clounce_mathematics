@@ -45,4 +45,14 @@ class Sequences {
             yield (pow(2, $position) - pow(-1, $position)) / 3;
         }
     }
+
+    public static function kappaNumber(int $maxPosition, int $position) {
+        return pow(2, $maxPosition) * (self::jacobsthalNumberNonRecursive($position) / pow(2, $position - 1));
+    }
+
+    public static function kappaNumberGenerator(int $maxPosition) {
+        for ($position = 1; $position <= $maxPosition; $position++) {
+            yield self::kappaNumber($maxPosition, $position);
+        }
+    }
 }
