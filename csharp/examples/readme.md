@@ -14,7 +14,7 @@ The following examples have been implemented in C# to demostrate the concepts de
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
 | [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) |  ClouncMath.Sequences::JacobsthalNumber <br/> ClounceMath.Sequences::JacobsthalNumberGenerator <br/> ClouncMath.Sequences::JacobsthalNumberNonRecursive <br/> ClounceMath.Sequences::JacobsthalNumberNonRecursiveGenerator | dotnet run jacobsthal |
-| [Kappa](https://www.clounce.com/mathematics/kappa-seqeunce) | ClounceMath.Sequences::KappaNumber <br/> ClounceMath.Sequences::KappaNumberGenerator | dotnet run kappa
+| [Kappa](https://www.clounce.com/mathematics/kappa-sequence) | ClounceMath.Sequences::KappaNumber <br/> ClounceMath.Sequences::KappaNumberGenerator | dotnet run kappa
 <br/><br/>
 
 | Algorithm | Library Method | Example |

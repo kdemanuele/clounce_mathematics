@@ -13,7 +13,7 @@ The following examples have been implemented in JavaScript (ES6) to demostrate t
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
 | [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) |  require('../lib/sequences.js') | node jacobsthal_numbers.js |
-| [Kappa](https://www.clounce.com/mathematics/kappa-seqeunce) |  require('../lib/sequences.js') <br/> sequences.kappaNumber <br/> sequences.kappaNumberGenerator | node kappa_numbers.js |
+| [Kappa](https://www.clounce.com/mathematics/kappa-sequence) |  require('../lib/sequences.js') <br/> sequences.kappaNumber <br/> sequences.kappaNumberGenerator | node kappa_numbers.js |
 <br/><br/>
 
 | Algorithm | Library Method | Example |

@@ -13,7 +13,7 @@ The following examples have been implemented in DartLang to demostrate the conce
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
 | [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) | import('package:clounce_math/sequences/jacobsthal_numbers.dart'); JacobsthalNumbers.compute <br/> import('package:clounce_math/sequences/jacobsthal_numbers.dart'); JacobsthalNumbers.generate | dart jacobsthal_numbers.dart |
-| [Kappa](https://www.clounce.com/mathematics/kappa-seqeunce) | import('package:clounce_math/sequences/kappa_numbers.dart'); KappaNumber.compute <br/> import('package:clounce_math/sequences/kappa_numbers.dart'); KappaNumber.generate | dart kappa_numbers.dart |
+| [Kappa](https://www.clounce.com/mathematics/kappa-sequence) | import('package:clounce_math/sequences/kappa_numbers.dart'); KappaNumber.compute <br/> import('package:clounce_math/sequences/kappa_numbers.dart'); KappaNumber.generate | dart kappa_numbers.dart |
 <br/><br/>
 
 | Algorithm | Library Method | Example |
