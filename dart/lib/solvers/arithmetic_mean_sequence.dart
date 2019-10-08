@@ -8,14 +8,14 @@ class ArithmeticMeanSequence {
     }
 
     var numberOfVariables = variables.length;
-    var sequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables);
-    var nextSequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables + 1);
+    var sequenceNumber = JacobsthalNumber.computeWithoutRecursion(numberOfVariables);
+    var nextSequenceNumber = JacobsthalNumber.computeWithoutRecursion(numberOfVariables + 1);
 
     variables[0] = ((pow(2, numberOfVariables) * sequenceEndValue) - (sequenceNumber * sequenceStartValue)) / nextSequenceNumber;
 
     for (var i = 1; i < numberOfVariables; i++) {
-        sequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(i);
-        nextSequenceNumber = JacobsthalNumber.comnputeWithoutRecursion(i + 1);
+        sequenceNumber = JacobsthalNumber.computeWithoutRecursion(i);
+        nextSequenceNumber = JacobsthalNumber.computeWithoutRecursion(i + 1);
 
         variables[i] = ((sequenceNumber * sequenceStartValue) + (nextSequenceNumber * variables[0])) /pow(2, i);
     }
@@ -27,10 +27,10 @@ class ArithmeticMeanSequence {
                 return 0;
         }
 
-        var nthJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(variableToSolve);
-        var preNthJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(variableToSolve - 1);
-        var sizeVarJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables);
-        var nextSizeVarJacobsthal = JacobsthalNumber.comnputeWithoutRecursion(numberOfVariables + 1);
+        var nthJacobsthal = JacobsthalNumber.computeWithoutRecursion(variableToSolve);
+        var preNthJacobsthal = JacobsthalNumber.computeWithoutRecursion(variableToSolve - 1);
+        var sizeVarJacobsthal = JacobsthalNumber.computeWithoutRecursion(numberOfVariables);
+        var nextSizeVarJacobsthal = JacobsthalNumber.computeWithoutRecursion(numberOfVariables + 1);
 
         var yCalculation = pow(2, numberOfVariables) * nthJacobsthal * sequenceEndValue;
         var xCalculation = ((pow(-1, variableToSolve) * sizeVarJacobsthal) +
