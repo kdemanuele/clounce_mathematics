@@ -13,7 +13,7 @@ The following examples have been implemented in Python to demostrate the concept
 | Sequence Concept | Library Method | Example |
 |:---------|:----------------|:---------|
 | [Jacobsthal](https://www.clounce.com/mathematics/jacobsthal-number-sequence) |  Sequences.jacobsthal_number <br/> Sequences.jacobsthal_number_generator <br/> Sequences.jacobsthal_number_non_recursive <br/> Sequences.jacobsthal_number_generator_non_recursive | python3 jacobsthal |
-| [Kappa](https://www.clounce.com/mathematics/kappa-seqeunce) | Sequences.kappa_number <br/> Sequences.kappa_generator | python3 kappa
+| [Kappa](https://www.clounce.com/mathematics/kappa-sequence) | Sequences.kappa_number <br/> Sequences.kappa_generator | python3 kappa
 <br/><br/>
 
 | Algorithm | Library Method | Example |
