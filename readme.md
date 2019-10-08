@@ -16,10 +16,10 @@ The repository is structured by programming language and each programmming langu
 
 ***Note on the programming language choice***
 
-*The programming languages where chosen out of interest of the library developer. There is nothing binding thelanguages and any programming language can be use with existing mathematical libraries or by defining your own classes.*
+*The programming languages where chosen out of interest of the library developer. There is nothing binding the languages and any programming language can be use with existing mathematical libraries or by defining your own classes.*
 
 ## Dart Library
 
-The dart folder contains a valid Dart library that can be used in dart projects. Dart mathamtical functions are a little limited when when the project started. Thus an attempt for a proper library with optimisations has been considered.
+The dart folder contains a valid Dart library that can be used in dart projects. Dart mathematical functions are a little limited when the project started. Thus an attempt for a proper library with optimisations has been considered.
 
 **The library is under MIT license like all the rest of the code in this repository.**
